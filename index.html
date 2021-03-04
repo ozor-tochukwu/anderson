@@ -36,8 +36,13 @@
 
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="css/style.css">
+
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> -->
 
 	<script src="js/modernizr-2.6.2.min.js"></script>
 
@@ -71,6 +76,35 @@
 			border-radius: 3px;
 			box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 		}
+
+		.leftside {
+			height: 100vh;
+			width: auto;
+			border-radius: 30px;
+			background-color: rgb(243, 240, 240);
+			align-items: center;
+			justify-content: center;
+		}
+
+		.rightside {
+			height: 100vh;
+			width: auto;
+		}
+
+		@media screen and (max-width: 769px) {
+
+			.leftside {
+				display: none;
+			}
+		}
+
+		@media screen and (min-width: 769px) {
+
+			.rightside .opacity {
+				display: none;
+			}
+		}
+
 
 		.wrapper .box i.quote {
 			font-size: 20px;
@@ -126,17 +160,10 @@
 
 
 		div.opacity {
-			margin: 30px;
 			background-color: #ffffff;
 			border: 1px solid #ffffff;
 			opacity: 0.6;
-			margin-top: 100px;
-		}
-
-		div.opacity h2 {
-			margin: 5%;
-			font-weight: bold;
-			color: #000000;
+			/* display: block; */
 		}
 
 		@media (max-width: 1045px) {
@@ -194,36 +221,53 @@
 			<div id="colorlib-main">
 				<section id="colorlib-hero" class="js-fullheight" data-section="home">
 					<div class="flexslider js-fullheight">
-						<ul class="slides">
-							<li style="background-image: url(images/home.jpg);">
-								<div class="overlay"></div>
-								<div class="container-fluid">
-									<div class="row">
-										<div
-											class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-											<div class="slider-text-inner js-fullheight">
-												<div class="desc">
-													<div class="opacity">
-														<h1
-															style="font-weight: 800;font-size: x-large;text-align: left;">
-															Hi! I'm </h1>
-														<h1 style="text-align: left;"><b>Anderson Salt</b></h1>
-														<h2 style="font-weight: 500;font-size: x-large;text-align: left;
-															 color: rgb(48, 50, 175);"><b>
-																Financial
-																Consultant | Stock Broker</b></h2>
 
-													</div>
-												</div>
-											</div>
+						<div class="row no-gutters" style="padding: 20px;">
+							<div class="col-md-6 no-gutters">
+								<div class="leftside">
+									<div style="background-color:white; padding: 20px;height: 300px;width: 300px;
+										 border-radius: 150px;position: absolute; margin-top: 50%; margin-left: 10%; text-align: center;">
+										<div>
+											<h1 style="margin-top: 15px;">Hi! I'm</h1>
+											<h1 style="margin-top: -20px;"><b>Anderson Salt</b></h1>
+										</div>
+										<div>
+											<h2>I'm a</h2>
+											<h2 style="margin-top: -20px;"><b>Financial Consultant<br>| Stock Broker</b>
+											</h2>
 										</div>
 									</div>
 								</div>
-							</li>
-						</ul>
+							</div>
+							<div class="col-md-6 no-gutters">
+								<div class="rightside d-flex justify-content-center align-items-center">
+									<div style="background-image: url(images/Mark1.jpg);background-size: cover;background-position: center;
+										 background-repeat: no-repeat; height: 100%; width: 100%;border-radius: 30px;">
+										<div class="opacity"
+											style="position: absolute;bottom: 0px;width: 100%; border-radius: 20px; text-align: center;">
+											<div>
+												<h1 style="margin-top: 15px;">Hi! I'm</h1>
+												<h1 style="margin-top: -20px;"><b>Anderson Salt</b></h1>
+											</div>
+											<div>
+												<h2 style="font-weight: 500;font-size: x-large;">I'm a</h2>
+												<h2 style="font-weight: 500;font-size: x-large;
+												 color: rgb(48, 50, 175);margin-top: -20px;"><b>
+														Financial
+														Consultant | <br> Stock Broker</b></h2>
+											</div>
+
+
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
 					</div>
+
 				</section>
-				<section class="colorlib-about" data-section="about">
+				<section class="colorlib-about" data-section="about" style="margin-top: 0px;">
 					<div class="colorlib-narrow-content">
 						<div class="row">
 							<div class="col-md-12">
@@ -251,7 +295,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="colorlib-services" data-section="services">
+				<section class="colorlib-services" data-section="services" style="margin-top: 0px">
 					<div class="colorlib-narrow-content">
 						<div class="row">
 							<div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
@@ -325,7 +369,7 @@
 						</div>
 					</div>
 				</div>
-				<section class="colorlib-skills" data-section="skills">
+				<section class="colorlib-skills" data-section="skills" style="margin-top: 0px">
 					<div class="colorlib-narrow-content">
 						<div class="row">
 							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
@@ -403,7 +447,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="colorlib-education" data-section="education">
+				<section class="colorlib-education" data-section="education" style="margin-top: 0px">
 					<div class="colorlib-narrow-content">
 						<div class="row">
 							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
@@ -495,7 +539,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="colorlib-experience" data-section="experience">
+				<section class="colorlib-experience" data-section="experience" style="margin-top: 0px">
 					<div class="colorlib-narrow-content">
 						<div class="row">
 							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
@@ -592,7 +636,7 @@
 					</div>
 				</section>
 
-				<section class="colorlib-blog" data-section="blog">
+				<section class="colorlib-blog" data-section="blog" style="margin-top: 0px">
 					<div class="colorlib-narrow-content">
 						<div class="row">
 							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
@@ -651,7 +695,7 @@
 							</div>
 						</div>
 				</section>
-				<section class="colorlib-contact" data-section="contact">
+				<section class="colorlib-contact" data-section="contact" style="margin-top: 0px">
 					<div class="colorlib-narrow-content">
 						<div class="row">
 							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
